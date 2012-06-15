@@ -15,6 +15,7 @@
 		F87C61A9158A7CDC000C21C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F87C61A8158A7CDC000C21C6 /* AppDelegate.m */; };
 		F87C61AC158A7CDC000C21C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F87C61AB158A7CDC000C21C6 /* ViewController.m */; };
 		F87C61AF158A7CDC000C21C6 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F87C61AD158A7CDC000C21C6 /* ViewController.xib */; };
+		F87C61BB158A842B000C21C6 /* RevealingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F87C61BA158A842B000C21C6 /* RevealingCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +23,17 @@
 		F87C6198158A7CDC000C21C6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F87C619A158A7CDC000C21C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F87C619C158A7CDC000C21C6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		F87C61A0158A7CDC000C21C6 /* RevealingTableView-Info.plist */ = {isa = PBXFileReference; path = "RevealingTableView-Info.plist"; sourceTree = "<group>"; };
+		F87C61A0158A7CDC000C21C6 /* RevealingTableView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RevealingTableView-Info.plist"; sourceTree = "<group>"; };
 		F87C61A2158A7CDC000C21C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F87C61A4158A7CDC000C21C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F87C61A6158A7CDC000C21C6 /* RevealingTableView-Prefix.pch */ = {isa = PBXFileReference; path = "RevealingTableView-Prefix.pch"; sourceTree = "<group>"; };
-		F87C61A7158A7CDC000C21C6 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		F87C61A6158A7CDC000C21C6 /* RevealingTableView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RevealingTableView-Prefix.pch"; sourceTree = "<group>"; };
+		F87C61A7158A7CDC000C21C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F87C61A8158A7CDC000C21C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F87C61AA158A7CDC000C21C6 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		F87C61AA158A7CDC000C21C6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		F87C61AB158A7CDC000C21C6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		F87C61AE158A7CDC000C21C6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		F87C61B9158A842B000C21C6 /* RevealingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RevealingCell.h; sourceTree = "<group>"; };
+		F87C61BA158A842B000C21C6 /* RevealingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RevealingCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,8 @@
 				F87C61A8158A7CDC000C21C6 /* AppDelegate.m */,
 				F87C61AA158A7CDC000C21C6 /* ViewController.h */,
 				F87C61AB158A7CDC000C21C6 /* ViewController.m */,
+				F87C61B9158A842B000C21C6 /* RevealingCell.h */,
+				F87C61BA158A842B000C21C6 /* RevealingCell.m */,
 				F87C61AD158A7CDC000C21C6 /* ViewController.xib */,
 				F87C619F158A7CDC000C21C6 /* Supporting Files */,
 			);
@@ -163,6 +168,7 @@
 				F87C61A5158A7CDC000C21C6 /* main.m in Sources */,
 				F87C61A9158A7CDC000C21C6 /* AppDelegate.m in Sources */,
 				F87C61AC158A7CDC000C21C6 /* ViewController.m in Sources */,
+				F87C61BB158A842B000C21C6 /* RevealingCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
