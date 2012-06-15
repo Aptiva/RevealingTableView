@@ -85,6 +85,7 @@
     cell.textLabel.text = [NSString stringWithFormat:@"%d", indexPath.row];
 
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+
     return cell;
 }
 
@@ -93,6 +94,7 @@
     return 44 + indexPath.row * 5;
 }
 
+/*
 - (NSIndexPath *)tableView:(UITableView *)theTableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 #ifdef DEBUG
@@ -100,5 +102,6 @@
 #endif
     return indexPath;
 }
+ */
 
 @end

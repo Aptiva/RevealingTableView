@@ -19,7 +19,7 @@
 
 - (CGFloat)originalCenter;
 
-- (void)setupGestureRecognizers;
+//- (void)setupGestureRecognizers;
 - (void)panCell:(UIPanGestureRecognizer *)recognizer;
 
 @end
@@ -28,7 +28,7 @@
 
 @synthesize delegate = _delegate;
 @synthesize panGesture = _panGesture;
-
+@synthesize backView = _backView;
 @synthesize initialTouchPositionX = _initialTouchPositionX;
 @synthesize initialHorizontalCenter = _initialHorizontalCenter;
 
@@ -38,6 +38,10 @@
     if (self) {
         // Initialization code
 
+        UIView *backgroundView         = [[UIView alloc] initWithFrame:self.contentView.frame];
+		backgroundView.backgroundColor = [UIColor scrollViewTexturedBackgroundColor];
+		self.backView                  = backgroundView;
+        
         _panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panCell:)] ;
         _panGesture.delegate = self;
 		[self addGestureRecognizer:_panGesture];
@@ -45,14 +49,35 @@
     }
     return self;
 }
+/*
+- (void)dealloc
+{
+	self.panGesture = nil;
+	self.backView    = nil;
+	[super dealloc];
+}
+ */
 
+
+- (void)layoutSubviews
+{
+	[super layoutSubviews];
+	
+	[self addSubview:self.backView];
+	[self addSubview:self.contentView];
+	self.backView.frame = self.contentView.frame;
+}
+
+
+
+/*
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated
 {
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
 }
-
+*/
 
 //- (void)setupGestureRecognizers
 //{
@@ -71,13 +96,13 @@
 - (void)panCell:(UIPanGestureRecognizer *)recognizer{
     CGPoint translation           = [recognizer translationInView:self];
 	CGPoint currentTouchPoint     = [recognizer locationInView:self];
-	CGPoint velocity              = [recognizer velocityInView:self];
+//	CGPoint velocity              = [recognizer velocityInView:self];
     
     CGFloat originalCenter        = self.originalCenter;
 	CGFloat currentTouchPositionX = currentTouchPoint.x;
 	CGFloat panAmount             = self.initialTouchPositionX - currentTouchPositionX;
 	CGFloat newCenterPosition     = self.initialHorizontalCenter - panAmount;
-	CGFloat centerX               = self.contentView.center.x;
+//	CGFloat centerX               = self.contentView.center.x;
 
     
 //    NSLog(@"currentTouchPoint:%@|translation:%@|velocity:%@",NSStringFromCGPoint(currentTouchPoint),NSStringFromCGPoint(translation),NSStringFromCGPoint(velocity));
@@ -142,8 +167,6 @@
                          completion:^(BOOL f) {
 
                          }];
-
-        
         
     }
 }
